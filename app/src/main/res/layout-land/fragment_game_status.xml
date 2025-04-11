@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#121212">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/textViewGameStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Player X's Turn"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutScores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/textViewGameStatus">
+
+            <TextView
+                android:id="@+id/textViewPlayerXScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Player X: 0"
+                android:textSize="14sp"
+                android:textColor="#FF4081" />
+
+            <TextView
+                android:id="@+id/textViewPlayerOScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Player O: 0"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                android:textColor="#40C4FF" />
+
+            <TextView
+                android:id="@+id/textViewDraws"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Draws: 0"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- Game Over Overlay -->
+        <FrameLayout
+            android:id="@+id/gameOverOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#80000000"
+            android:padding="12dp"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutScores"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/textViewGameResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Game Over!"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="#FFFFFF" />
+        </FrameLayout>
+
+        <!-- Button Container with horizontal layout -->
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/gameOverOverlay">
+
+            <Button
+                android:id="@+id/buttonReset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PLAY AGAIN"
+                android:backgroundTint="#6200EE"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/buttonNewGame"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="NEW GAME"
+                android:backgroundTint="#E91E63"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radioGroupMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/buttonContainer">
+
+            <RadioButton
+                android:id="@+id/radioButtonPvP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player vs Player"
+                android:textSize="14sp"
+                android:textColor="#FFFFFF" />
+
+            <RadioButton
+                android:id="@+id/radioButtonPvAI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player vs AI"
+                android:textSize="14sp"
+                android:textColor="#FFFFFF" />
+        </RadioGroup>
+
+        <Spinner
+            android:id="@+id/spinnerTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="#505050"
+            android:padding="4dp"
+            android:popupBackground="#505050"
+            android:entries="@array/theme_options"
+            app:layout_constraintTop_toBottomOf="@id/radioGroupMode" />
+
+        <Spinner
+            android:id="@+id/spinnerDifficulty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="#505050"
+            android:padding="4dp"
+            android:popupBackground="#505050"
+            android:entries="@array/difficulty_levels"
+            app:layout_constraintTop_toBottomOf="@id/spinnerTheme" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

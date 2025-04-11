@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base theme colors -->
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <!-- Game theme - Modern -->
+    <color name="modern_background">#121212</color>
+    <color name="modern_cell_background">#2D2D2D</color>
+    <color name="modern_x_color">#FF4081</color>
+    <color name="modern_o_color">#40C4FF</color>
+    <color name="modern_grid_line">#5E5E5E</color>
+    <color name="modern_text">#FFFFFF</color>
+
+    <!-- Game theme - Classic -->
+    <color name="classic_background">#F0F0F0</color>
+    <color name="classic_cell_background">#FFFFFF</color>
+    <color name="classic_x_color">#D32F2F</color>
+    <color name="classic_o_color">#1976D2</color>
+    <color name="classic_grid_line">#212121</color>
+    <color name="classic_text">#212121</color>
+
+    <!-- Game theme - Nature -->
+    <color name="nature_background">#E8F5E9</color>
+    <color name="nature_cell_background">#FFFFFF</color>
+    <color name="nature_x_color">#388E3C</color>
+    <color name="nature_o_color">#0288D1</color>
+    <color name="nature_grid_line">#558B2F</color>
+    <color name="nature_text">#33691E</color>
+</resources>

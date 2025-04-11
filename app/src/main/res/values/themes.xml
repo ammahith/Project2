@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#6200EE</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:statusBarColor">#6200EE</item>
+        <item name="android:navigationBarColor">#121212</item>
+        <item name="android:windowBackground">#121212</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+    <!-- Game Cell Button Styles -->
+    <style name="GameCellButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/cell_background</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">2dp</item>
+    </style>
+
+    <!-- Status Text Style -->
+    <style name="GameStatusText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- Button Style -->
+    <style name="GameControlButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+</resources>
